@@ -1,0 +1,33 @@
+/* Logo Image */
+.logo-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Tailwind responsive utilities for mobile */
+@media (max-width: 768px) {
+  .text-2xl {
+    font-size: 1.25rem; /* Reduce font size for mobile */
+  }
+
+  .gap-4 {
+    gap: 0.75rem; /* Reduce the gap between nav links */
+  }
+
+  .gap-8 {
+    gap: 1rem; /* Reduce the gap for mobile */
+  }
+
+  .p-8 {
+    padding: 0.75rem; /* Adjust padding for mobile */
+  }
+
+  .w-64 {
+    width: 100%; /* Full width for nav on mobile */
+  }
+
+  .p-10 {
+    padding: 1rem; /* Adjust content area padding */
+  }
+}

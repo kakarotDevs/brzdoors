@@ -1,0 +1,24 @@
+/* Import Tailwind */
+@import "tailwindcss";
+
+/* Root Variables for Theming */
+:root {
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-heading: "Red Hat Display", sans-serif;
+  --color-bg: #ffffff;
+  --color-active-text: #000000;
+  --color-inactive-text: #999999;
+  --color-orange-text: #E85D04;
+  --color-orange-inactive-text: #F4A261 ;
+  --color-primary: #646cff; /* Accent color */
+  --color-hover: #4e4eff;
+}
+
+/* Body Styles */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
