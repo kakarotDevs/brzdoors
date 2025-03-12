@@ -1,34 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Loader2 } from "lucide-react";
 
 function Contact() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [airtableUrl, setAirtableUrl] = useState(null);
 
-  const handleIframeLoad = () => {
-    setIsLoaded(true);
-  };
+  useEffect(() => {
+    // Retrieve Airtable URL from localStorage
+    const airtableUrls = JSON.parse(localStorage.getItem("airtableUrls"));
+    if (airtableUrls && airtableUrls.contactForm) {
+      setAirtableUrl(airtableUrls.contactForm);
+    } else {
+      // Fallback URL if not found in localStorage
+      setAirtableUrl(
+        "https://airtable.com/embed/appXGGahffdQcOP2N/pageLnc3yGEKzg7Ke/form",
+      );
+    }
+  }, []);
 
   return (
-    <div className="relative flex justify-center items-center h-screen bg-white">
-      {/* Spinner will be absolutely positioned in the center */}
+    <div className="relative flex h-screen items-center justify-center bg-white">
+      {/* Loader */}
       {!isLoaded && (
-        <div className="absolute flex justify-center items-center animate-spin">
-          <Loader2 className="w-12 h-12" style={{ color: '#999999' }} />
+        <div
+          className="absolute flex flex-col items-center justify-center"
+          aria-live="polite" // Improved accessibility
+        >
+          <Loader2 className="h-12 w-12 animate-spin text-gray-500" />
         </div>
       )}
 
-      {/* The iframe with a subtle fade-in effect */}
-      <iframe
-        src="https://airtable.com/embed/appXGGahffdQcOP2N/pageLnc3yGEKzg7Ke/form"
-        width="100%"
-        height="600"
-        loading="lazy"
-        onLoad={handleIframeLoad}
-        style={{
-          opacity: isLoaded ? 1 : 0, // opacity change
-          transition: "opacity 0.3s ease-out", // subtle fade-in transition
-        }}
-      />
+      {/* Airtable Form */}
+      {airtableUrl && (
+        <iframe
+          src={airtableUrl}
+          width="100%"
+          height="600"
+          loading="lazy"
+          title="Contact Form"
+          onLoad={() => setIsLoaded(true)}
+          className="transition-opacity duration-300 ease-out"
+          style={{ opacity: isLoaded ? 1 : 0 }}
+        />
+      )}
     </div>
   );
 }

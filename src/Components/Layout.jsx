@@ -3,26 +3,25 @@ import { NavLink, Outlet } from "react-router";
 
 function Layout() {
   return (
-    <div className="flex min-h-screen">
-      {/* Left Navigation */}
-      <nav className="w-64 p-8 min-h-screen sticky top-0 flex flex-col gap-8">
+    <div className="flex flex-col md:flex-row">
+      <nav className="flex w-full flex-col gap-8 p-8 md:w-64">
         <NavLink
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "text-4xl font-light text-[var(--color-orange-text)]" // Active state for web
-              : "text-4xl font-light text-[var(--color-orange-inactive-text)] hover:text-[var(--color-orange-text)]" // Inactive state for web
+              ? "text-4xl font-light text-[var(--color-orange-active-text)]"
+              : "text-4xl font-light text-[var(--color-orange-active-text)] hover:text-[var(--color-orange-inactive-text)]"
           }
         >
           Briz Doors
         </NavLink>
-        <div className="flex flex-col gap-4 mt-4">
+        <div className="mt-4 flex flex-col gap-4">
           <NavLink
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "text-4xl font-light text-[var(--color-active-text)]" // Active state for web
-                : "text-4xl font-light text-[var(--color-inactive-text)] hover:text-black" // Inactive state for web
+                ? "text-4xl font-light text-[var(--color-active-text)]"
+                : "text-4xl font-light text-[var(--color-inactive-text)] hover:text-black"
             }
           >
             About
@@ -31,8 +30,8 @@ function Layout() {
             to="/contact"
             className={({ isActive }) =>
               isActive
-                ? "text-4xl font-light text-[var(--color-active-text)]" // Active state for web
-                : "text-4xl font-light text-[var(--color-inactive-text)] hover:text-black" // Inactive state for web
+                ? "text-4xl font-light text-[var(--color-active-text)]"
+                : "text-4xl font-light text-[var(--color-inactive-text)] hover:text-black"
             }
           >
             Contact
@@ -41,18 +40,16 @@ function Layout() {
             to="/order"
             className={({ isActive }) =>
               isActive
-                ? "text-4xl font-light text-[var(--color-active-text)]" // Active state for web
-                : "text-4xl font-light text-[var(--color-inactive-text)] hover:text-black" // Inactive state for web
+                ? "text-4xl font-light text-[var(--color-active-text)]"
+                : "text-4xl font-light text-[var(--color-inactive-text)] hover:text-black"
             }
           >
             Order
           </NavLink>
         </div>
       </nav>
-
-      {/* Right Content Area */}
-      <main className="flex-1 p-10">
-        <Outlet />
+      <main className="flex-1">
+        <Outlet /> {/* The preloaded URL can be accessed directly here */}
       </main>
     </div>
   );

@@ -8,10 +8,16 @@
   --color-bg: #ffffff;
   --color-active-text: #000000;
   --color-inactive-text: #999999;
-  --color-orange-text: #E85D04;
-  --color-orange-inactive-text: #F4A261 ;
+  --color-orange-active-text: #f4a261;
+  --color-orange-inactive-text: #e85d04;
   --color-primary: #646cff; /* Accent color */
   --color-hover: #4e4eff;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 /* Body Styles */
@@ -22,3 +28,24 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+p {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Example for Tailwind */
+.bg-home {
+  background-image: url("./assets/images/web-B.png");
+  background-size: contain; /* or cover */
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}

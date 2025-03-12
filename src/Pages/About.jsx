@@ -1,24 +1,37 @@
-import React from 'react'
+import React from "react";
 
 function About() {
   return (
     <div className="flex flex-col items-start pt-10">
-      <main className="flex-1 p-6 md:p-12 max-w-[800px] mx-auto">
-        <h1 className="text-5xl font-[var(--font-heading)] font-light leading-tight mt-12 mb-6">
-  Who We Are
-</h1>
-        <p className="text-xl leading-[1.7] max-w-prose mt-6 font-[var(--font-heading)]">
-  We believe simplicity is strength. A door is not just an entry but a quiet statement—one of precision, balance, and purpose.
-  <br /><br />
-  With decades of experience across commercial and residential construction, we have built spaces that endure. From corporate offices to places of learning, our work has shaped environments where people live, think, and create.
-  <br /><br />
-  Our approach is measured. Every line, every material, every finish is considered. Nothing is excessive. Nothing is without intention.
-  <br /><br />
-  At Briz Doors, we do not add more. We refine what is essential.
-</p>
+      <main className="mx-auto max-w-[800px] flex-1 p-6 md:p-12">
+        <h1 className="mt-6 mb-6 text-center text-5xl leading-tight font-semibold md:mt-12 md:text-left">
+          Who We Are
+        </h1>
+        <p className="mt-6 max-w-prose text-xl leading-relaxed text-gray-700">
+          At Briz Doors, we believe that simplicity is strength. A door is not
+          just an entry—it’s a statement of precision, balance, and purpose.
+          <br />
+          Our approach is simple: we create doors that are functional,
+          efficient, and designed to fit seamlessly into any space.
+          <br />
+          We understand the importance of ease, which is why we’ve built a
+          system that makes selecting and ordering your doors straightforward
+          and efficient. Whether for commercial spaces or specialized
+          environments, our streamlined process ensures you get exactly what you
+          need, when you need it.
+          <br />
+          Our focus is on what matters most: quality, precision, and simplicity.
+          Every detail is crafted with intention, ensuring your space is
+          enhanced without excess.
+          <br />
+          <br />
+          <span className="font-semibold">
+            Briz Doors: Doors made simple, designed to last.
+          </span>
+        </p>
       </main>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
