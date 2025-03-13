@@ -2,12 +2,12 @@ import React from "react";
 
 function About() {
   return (
-    <div className="flex flex-col items-start pt-10">
+    <div className="flex flex-col items-start md:pt-10">
       <main className="mx-auto max-w-[800px] flex-1 p-6 md:p-12">
-        <h1 className="mt-6 mb-6 text-center text-5xl leading-tight font-semibold md:mt-12 md:text-left">
+        <h1 className="mt-6 mb-6 text-left text-2xl leading-tight font-semibold md:mt-12 md:text-center md:text-5xl">
           Who We Are
         </h1>
-        <p className="mt-6 max-w-prose text-xl leading-relaxed text-gray-700">
+        <p className="mt-6 max-w-prose text-sm leading-relaxed text-gray-700 md:text-xl">
           At Briz Doors, we believe that simplicity is strength. A door is not
           just an entry—it’s a statement of precision, balance, and purpose.
           <br />

@@ -19,11 +19,11 @@ function Contact() {
   }, []);
 
   return (
-    <div className="relative flex h-screen items-center justify-center bg-white">
-      {/* Loader */}
+    <div className="relative h-screen w-full bg-white sm:mt-0 md:mt-8">
+      {/* Loader - absolutely centered */}
       {!isLoaded && (
         <div
-          className="absolute flex flex-col items-center justify-center"
+          className="absolute inset-0 mt-64 flex justify-center md:mt-0 md:items-center"
           aria-live="polite" // Improved accessibility
         >
           <Loader2 className="h-12 w-12 animate-spin text-gray-500" />

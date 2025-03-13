@@ -18,7 +18,9 @@ const Order = () => {
   return (
     <div className="flex flex-col items-start pt-10">
       <main className="mx-auto max-w-[800px] flex-1 p-6 md:p-12">
-        <h1 className="mt-12 mb-6 text-5xl leading-tight">Place Your Order</h1>
+        <h1 className="mb-6 text-2xl leading-tight md:mt-12 md:text-5xl">
+          Place Your Order
+        </h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           <button
             onClick={() =>
@@ -26,7 +28,7 @@ const Order = () => {
                 "https://airtable.com/embed/appXGGahffdQcOP2N/pagkxMrXZL93IWmHs/form",
               )
             }
-            className="rounded bg-blue-500 px-4 py-2 text-white shadow hover:bg-blue-600"
+            className="rounded bg-blue-500 px-4 py-2 whitespace-nowrap text-white shadow hover:bg-blue-600"
           >
             Door Order Form
           </button>
@@ -36,7 +38,7 @@ const Order = () => {
                 "https://airtable.com/embed/appXGGahffdQcOP2N/pageLnc3yGEKzg7Ke/form",
               )
             }
-            className="rounded bg-blue-500 px-4 py-2 text-white shadow hover:bg-blue-600"
+            className="rounded bg-blue-500 px-4 py-2 whitespace-nowrap text-white shadow hover:bg-blue-600"
           >
             Product 2
           </button>
@@ -46,7 +48,7 @@ const Order = () => {
                 "https://airtable.com/embed/appXGGahffdQcOP2N/pageLnc3yGEKzg7Ke/form",
               )
             }
-            className="rounded bg-blue-500 px-4 py-2 text-white shadow hover:bg-blue-600"
+            className="rounded bg-blue-500 px-4 py-2 whitespace-nowrap text-white shadow hover:bg-blue-600"
           >
             Product 3
           </button>

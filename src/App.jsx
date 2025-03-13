@@ -5,8 +5,7 @@ import About from "./Pages/About";
 import Order from "./Pages/Order";
 import Contact from "./Pages/Contact";
 import Layout from "./Components/Layout";
-import backgroundImage from "./assets/images/web-background.png";
-import { setAirtableUrls } from "./services/airtableService"; // Import the service
+import { setAirtableUrls } from "./services/airtableService";
 
 function App() {
   const location = useLocation();
