@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router";
+import { StrictMode, useEffect } from "react";
+import { Routes, Route, useLocation, Navigate } from "react-router";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Order from "./Pages/Order";
@@ -33,6 +33,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="order" element={<Order />} />
+          {/* Catch-all route to redirect invalid URLs to the home page */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </div>
